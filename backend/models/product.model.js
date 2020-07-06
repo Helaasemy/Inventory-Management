@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const mainSchema = new Schema({
+const productSchema = new Schema({
     username: { type: String, required: true },
     description: { type: String, required: true },
     duration: { type: Number, required: true },
@@ -11,5 +11,5 @@ const mainSchema = new Schema({
     timestamps: true,
 });
 
-const Main = mongoose.model('Main', mainSchema);
-module.exports = Main;
+const Product = mongoose.model('Product', productSchema);
+module.exports = Product;

@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const mainRouter = require('./routes/main');
+const productRouter = require('./routes/product');
 const usersRouter = require('./routes/users');
 
 require('dotenv').config();
@@ -24,7 +24,7 @@ connection.once('open', () => {
 });
 
 //routes
-app.use('/main', mainRouter);
+app.use('/product', productRouter);
 app.use('/users', usersRouter);
 
 
