@@ -21,7 +21,11 @@ connection.once('open', () => {
 
 });
 console.log(uri);
+const mainsRouter = require('./routes/mains');
+const usersRouter = require('./routes/users');
 
+app.use('/main', mainsRouter);
+app.use('/user', usersRouter);
 
 app.listen(port, () => {
     console.log(`server name : ${port}`);
